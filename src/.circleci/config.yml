@@ -1,0 +1,74 @@
+version: 2.1
+jobs:
+  build:
+    machine:
+      image: 'ubuntu-2004:202010-01'
+    steps:
+      - checkout
+      - run:
+          name: Install linux support apps-make
+          command: |
+            sudo apt-get install make
+      - run:
+          name: Install linux support apps-docker
+          command: |
+            sudo apt-get update
+            sudo apt-get install apt-transport-https ca-certificates curl software-properties-common
+            curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+            sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+            sudo apt-get update
+            sudo apt-get install docker-ce
+      - run:
+          name: Install linux support apps-docker test
+          command: |
+            sudo docker run hello-world
+      - run:
+          name: Install linux support apps-git cli
+          command: |
+            sudo apt-get install git
+      - run:
+          name: clone repo
+          command: |
+            git clone https://github.com/ElusiveGhosting/flaskPoc1.git flaskPoc1
+      - run:
+          name: change dir and test
+          command: |
+            cd flaskPoc1
+            ls
+            echo "hello from ubuntu"
+      - run:
+          name: install server
+          command: |
+            docker-compose run --rm server pip install -r requirements-dev.txt --user --upgrade --no-warn-script-location
+      - run:
+          name: start server
+          command: |
+            make server.daemon
+      - run:
+          name: Fix ssh Could not resolve hostname
+          command: |
+            ssh-keyscan -H 192.46.212.167 >> ~/.ssh/known_hosts
+
+      - add_ssh_keys: # add private SSH key from CircleCI account based on fingerprint.
+          fingerprints:
+            - "	db:27:b9:a5:12:2a:ce:cd:50:22:8c:31:e3:12:2b:93"
+
+      - run:
+          name: Deploy master.
+          command: |
+            ssh root@192.46.212.167 'ls && cd project && cd flaskPoc1 && git pull origin &&  make server.daemon'
+      - run:
+          name: Fix ssh Could not resolve hostname
+          command: |
+            ssh-keyscan -H 192.46.208.71 >> ~/.ssh/known_hosts
+
+      - add_ssh_keys: # add private SSH key from CircleCI account based on fingerprint.
+          fingerprints:
+            - "	c7:d5:ba:57:f1:c9:06:2b:33:01:fc:22:74:d2:4b:3c"
+
+      - run:
+          name: Deploy test.
+          command: |
+            ssh rohit1@192.46.208.71 'ls && cd adminportal && cd flaskPoc1 && git pull origin &&  make server.daemon'
+  
+  
