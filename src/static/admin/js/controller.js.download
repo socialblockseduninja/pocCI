@@ -1,0 +1,56 @@
+'use strict';
+$(document).ready(function () {
+	$.ajax({
+		type: 'GET',
+		url: 'https://api.learnyst.com/config',
+		async: false, //blocks window close
+		success: function (response) {
+			var all = document.getElementsByTagName('script'), fileSrc, version;
+
+      for (var i = 0, max = all.length; i < max; i++) {
+        fileSrc = all[i].src;
+        if (fileSrc.match('https://res-cdn.learnyst.com')) {
+          console.log(fileSrc);
+          version = fileSrc.substr(fileSrc.lastIndexOf('?'));
+          console.log(version);
+          break;
+        }
+      }
+
+			if(typeof response.school !== 'undefined' && response.school.api_version && response.school.api_version === 'v8'){
+				loadJS('https://res-cdn.learnyst.com/pro/admin/jarvisfront/scripts/main.js' + version, successCallback, document.body);
+			}else{
+				loadJS('https://res-cdn.learnyst.com/pro/admin/jarvisfront-old/scripts/main.js' + version, successCallback, document.body);
+			}
+		},
+		error: function (result) {
+		}
+	});
+});
+
+var loadJS = function(url, implementationCode, location){
+	//url is URL of external file, implementationCode is the code
+	//to be called from the file, location is the location to
+	//insert the <script> element
+
+	var scriptTag = document.createElement('script');
+	scriptTag.src = url;
+
+	scriptTag.onload = implementationCode;
+	scriptTag.onreadystatechange = implementationCode;
+
+	location.appendChild(scriptTag);
+};
+var successCallback = function(){
+	Ondesky.init();
+
+	// file drag and drop stopping on body
+	$(document.body).bind("dragover", function(e) {
+		e.preventDefault();
+		return false;
+	});
+	$(document.body).bind("drop", function(e){
+		e.preventDefault();
+		return false;
+	});
+};

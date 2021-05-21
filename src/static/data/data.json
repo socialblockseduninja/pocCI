@@ -1,0 +1,160 @@
+{
+"data":
+{
+        "age": 22,
+        "batchid": "PY101",
+        "cost": 400,
+        "courseid": "SCIFI01",
+        "cpuusage": 50,
+        "date": "Thu, 14 Jan 2021 00:00:00 GMT",
+        "learninghours": 6,
+        "maxnoofsubmission": 10,
+        "noofmoudles": 6,
+        "studentid": 123
+},
+{
+        "age": 22,
+        "batchid": "PY101",
+        "cost": 400,
+        "courseid": "SCIFI02",
+        "cpuusage": 50,
+        "date": "Thu, 14 Jan 2021 00:00:00 GMT",
+        "learninghours": 6,
+        "maxnoofsubmission": 10,
+        "noofmoudles": 6,
+        "studentid": 123
+},
+{
+        "age": 22,
+        "batchid": "PY101",
+        "cost": 400,
+        "courseid": "SCIFI03",
+        "cpuusage": 50,
+        "date": "Thu, 14 Jan 2021 00:00:00 GMT",
+        "learninghours": 6,
+        "maxnoofsubmission": 10,
+        "noofmoudles": 6,
+        "studentid": 123
+},
+{
+        "age": 22,
+        "batchid": "PY101",
+        "cost": 400,
+        "courseid": "SCIFI04",
+        "cpuusage": 50,
+        "date": "Thu, 14 Jan 2021 00:00:00 GMT",
+        "learninghours": 6,
+        "maxnoofsubmission": 10,
+        "noofmoudles": 6,
+        "studentid": 123
+},
+{
+        "age": 22,
+        "batchid": "PY101",
+        "cost": 400,
+        "courseid": "SCIFI05",
+        "cpuusage": 50,
+        "date": "Thu, 14 Jan 2021 00:00:00 GMT",
+        "learninghours": 6,
+        "maxnoofsubmission": 10,
+        "noofmoudles": 6,
+        "studentid": 123
+},
+{
+        "age": 22,
+        "batchid": "PY101",
+        "cost": 400,
+        "courseid": "SCIFI06",
+        "cpuusage": 50,
+        "date": "Thu, 14 Jan 2021 00:00:00 GMT",
+        "learninghours": 6,
+        "maxnoofsubmission": 10,
+        "noofmoudles": 6,
+        "studentid": 123
+},
+{
+        "age": 22,
+        "batchid": "PY101",
+        "cost": 400,
+        "courseid": "SCIFI07",
+        "cpuusage": 50,
+        "date": "Thu, 14 Jan 2021 00:00:00 GMT",
+        "learninghours": 6,
+        "maxnoofsubmission": 10,
+        "noofmoudles": 6,
+        "studentid": 123
+},
+{
+        "age": 22,
+        "batchid": "PY101",
+        "cost": 400,
+        "courseid": "SCIFI08",
+        "cpuusage": 50,
+        "date": "Thu, 14 Jan 2021 00:00:00 GMT",
+        "learninghours": 6,
+        "maxnoofsubmission": 10,
+        "noofmoudles": 6,
+        "studentid": 123
+},
+{
+        "age": 22,
+        "batchid": "PY101",
+        "cost": 400,
+        "courseid": "SCIFI01",
+        "cpuusage": 50,
+        "date": "Thu, 14 Jan 2021 00:00:00 GMT",
+        "learninghours": 6,
+        "maxnoofsubmission": 10,
+        "noofmoudles": 6,
+        "studentid": 123
+},
+{
+        "age": 22,
+        "batchid": "PY101",
+        "cost": 400,
+        "courseid": "SCIFI02",
+        "cpuusage": 50,
+        "date": "Thu, 14 Jan 2021 00:00:00 GMT",
+        "learninghours": 6,
+        "maxnoofsubmission": 10,
+        "noofmoudles": 6,
+        "studentid": 123
+},
+{
+        "age": 22,
+        "batchid": "PY101",
+        "cost": 400,
+        "courseid": "SCIFI03",
+        "cpuusage": 50,
+        "date": "Thu, 14 Jan 2021 00:00:00 GMT",
+        "learninghours": 6,
+        "maxnoofsubmission": 10,
+        "noofmoudles": 6,
+        "studentid": 123
+},
+{
+        "age": 22,
+        "batchid": "PY101",
+        "cost": 400,
+        "courseid": "SCIFI04",
+        "cpuusage": 50,
+        "date": "Thu, 14 Jan 2021 00:00:00 GMT",
+        "learninghours": 6,
+        "maxnoofsubmission": 10,
+        "noofmoudles": 6,
+        "studentid": 123
+},
+{
+        "age": 22,
+        "batchid": "PY101",
+        "cost": 400,
+        "courseid": "SCIFI05",
+        "cpuusage": 50,
+        "date": "Thu, 14 Jan 2021 00:00:00 GMT",
+        "learninghours": 6,
+        "maxnoofsubmission": 10,
+        "noofmoudles": 6,
+        "studentid": 123
+}
+}
+

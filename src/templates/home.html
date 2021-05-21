@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<div id="pieChart"></div>
+<div id="barChart"></div> 
+<select id='restraintTime' onchange='updateBarchart(this)'>
+<option value='daily' id='daily'>daily</option>
+<option value='weekly' id='weekly'>weekly</option>
+<option value='allTime' id='allTime'>allTime</option>
+</select>
+{% endblock content %}
